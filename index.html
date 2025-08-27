@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shubham Dalvi — Portfolio</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <!-- Styles -->
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <!-- Loader (now with random code snippet each visit) -->
+  <div class="loader" id="loader">
+    <div class="loader-card">
+      <div class="loader-header">
+        <span class="dot"></span>
+        <span class="title" id="loaderTitle">bootstrapping<span class="blink">_</span></span>
+      </div>
+      <pre class="loader-code" id="loaderCode"></pre>
+    </div>
+  </div>
+
+  <div id="particles-js"></div>
+
+  <!-- status -->
+  <div class="status-indicator">
+    <div class="status-dot"></div><span>Available for work</span>
+  </div>
+
+  <div class="container">
+    <div class="content">
+      <div class="profile-section">
+        <h1>Shubham Dalvi</h1>
+
+        <!-- Typing effect tagline -->
+        <p class="tagline">
+          <span class="mono">Coffee → Code converter •</span>
+          <span id="typed" class="typed"></span>
+          <span class="caret">|</span>
+        </p>
+
+        <!-- Socials -->
+        <div class="social-links">
+          <a class="social-link" href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a class="social-link" href="https://github.com/ShubhmDalvi" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a class="social-link" href="mailto:shubham@example.com" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="controls">
+        <button class="chip" id="aboutToggle" aria-expanded="false" aria-controls="aboutContent">
+          About Me <i class="fa-solid fa-user-astronaut"></i>
+        </button>
+        <button class="chip" id="projectsToggle" aria-expanded="false" aria-controls="projectsContent">
+          View Projects <i class="fa-solid fa-chevron-down" id="chevron"></i>
+        </button>
+      </div>
+
+      <!-- About (click to open; short & snappy) -->
+      <div class="about-content" id="aboutContent" hidden>
+        <div class="about-card">
+          <p><strong>Hi, I’m Shubham.</strong> I build clean, fast web apps and love turning ambiguous ideas into shipped features.</p>
+          <p>I enjoy Java/Spring + modern JS stacks, obsess over DX, and keep PRs tiny & readable.</p>
+          <p><em>Fun fact:</em> I name my side projects after songs and fix bugs with lo-fi on loop.</p>
+        </div>
+      </div>
+
+      <!-- Projects -->
+      <div class="projects-section">
+        <div class="projects-content" id="projectsContent">
+          <div class="projects-grid" id="projectsGrid">
+            <div class="project-card tilt">
+              <h3 class="project-title">TubeTune</h3>
+              <p class="project-description">A modern web app that enhances your YouTube experience with advanced features and intuitive design.</p>
+              <a class="project-link" href="https://github.com/ShubhmDalvi/TubeTune" target="_blank" rel="noopener">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="project-card tilt">
+              <h3 class="project-title">Coming Soon</h3>
+              <p class="project-description">More exciting projects are in development. Stay tuned for innovative solutions and creative implementations.</p>
+              <a class="project-link" href="#" aria-disabled="true">Stay Updated <i class="fa-regular fa-clock"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
