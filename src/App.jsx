@@ -285,10 +285,8 @@ const Terminal = ({ closeTerminal, projects }) => {
   // Boot Sequence Data
   const bootSequence = [
     "Initializing PortfolioOS Kernel v2.5.0...",
-    "Loading modules: React, GSAP, Three.js...",
     "Verifying user identity... SUCCESS",
     "Mounting filesystem /dev/portfolio...",
-    "Starting GUI services... OK",
     "Connecting to host... ESTABLISHED",
     "Type 'help' for available commands."
   ];
