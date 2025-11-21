@@ -546,14 +546,17 @@ const App = () => {
   useEffect(() => {
     const intervalTime = 20; 
     
-    // CHANGE: Detect mobile to speed up the counter
-    // On mobile, we jump by 5 to prevent performance lag/slowness
+    // CHANGE: Detect mobile
     const isMobile = window.innerWidth < 768;
-    const increment = isMobile ? 5 : 1; 
+    
+    // LOGIC:
+    // Mobile = +5 (Fast, as you liked it)
+    // Desktop = +3 (Previously +1 was too slow. +3 makes it ~3x faster)
+    const increment = isMobile ? 5 : 3; 
 
     const interval = setInterval(() => {
       setCounter((prev) => {
-        const next = prev + increment; // Use the dynamic increment
+        const next = prev + increment;
         if (next >= 100) {
           clearInterval(interval);
           return 100;
