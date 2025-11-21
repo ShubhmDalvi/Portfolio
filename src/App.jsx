@@ -544,7 +544,7 @@ const App = () => {
 
   // --- 1. Preloader Logic ---
   useEffect(() => {
-    const intervalTime = 2; 
+    const intervalTime = 20; 
     
     // CHANGE: Detect mobile to speed up the counter
     // On mobile, we jump by 5 to prevent performance lag/slowness
