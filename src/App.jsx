@@ -656,7 +656,7 @@ const App = () => {
 
   // --- 4. Main Animations & Stack Logic ---
   useGSAP(() => {
-    if (!loaderFinished || isTerminalOpen) return;
+    if (!loaderFinished) return;
 
     // Hero & General Reveal
     const tl = gsap.timeline();
@@ -666,7 +666,7 @@ const App = () => {
 
     gsap.utils.toArray(".reveal-up").forEach((elem) => {
       gsap.from(elem, {
-        scrollTrigger: { trigger: elem, start: "top 85%" },
+        scrollTrigger: { trigger: elem, start: "top 85%",toggleActions: "play none none reverse" },
         y: 60, opacity: 0, duration: 1.2, ease: "power3.out",
       });
     });
@@ -692,7 +692,7 @@ const App = () => {
       }
     });
 
-  }, { scope: containerRef, dependencies: [loaderFinished, isTerminalOpen] });
+  }, { scope: containerRef, dependencies: [loaderFinished] });
 
   // 3. EMAIL LOGIC
   const sendEmail = (e) => {
