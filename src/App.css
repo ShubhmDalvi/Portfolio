@@ -668,6 +668,7 @@ p { line-height: 1.6; color: var(--text-muted); font-size: 1.1rem; }
   margin-right: 0.8rem;
   display: inline-block;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .prompt-user { color: var(--terminal-green); }
