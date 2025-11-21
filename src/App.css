@@ -953,4 +953,10 @@ p { line-height: 1.6; color: var(--text-muted); font-size: 1.1rem; }
         padding-top: 0;      /* Removes top padding to move it up */
         padding-bottom: 8rem; /* Adds extra bottom space so the fixed button doesn't overlap the form */
     }
+
+    /* 10. Adjust Preloader Position on Mobile */
+    .preloader {
+        /* This pushes the loader up by 25% of the screen height */
+        padding-bottom: 25vh !important; 
+    }
 }
